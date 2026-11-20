@@ -1,0 +1,355 @@
+{
+  "note": "Manifest excludes its own hash; original user recordings and bundled weights are preserved. Downloaded test-only model caches are not part of the distribution.",
+  "original_python_files": 90,
+  "final_python_files": 92,
+  "changes": [
+    {
+      "path": "README.md",
+      "status": "modified",
+      "sha256_before": "a1afb3ba5ee6e9988d6ddd88603306f2c4f1dcf1b1c73920c532019ee4190a24",
+      "sha256_after": "06066323a08d4f1dec632d9ecbde78902bc30cc6a8fcddecde5ec8768ec0c327"
+    },
+    {
+      "path": "ai/__pycache__/__init__.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "98bf57aa75cf53fa512b28c577abec13ea2da8d303f29b2533a82d1390e5fe77",
+      "sha256_after": null
+    },
+    {
+      "path": "ai/__pycache__/bacaTex.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "42134cb8d0e3f60f2ac413d2380da97b43c394c62b0af0ce34246811b904304b",
+      "sha256_after": null
+    },
+    {
+      "path": "ai/__pycache__/deteksiObjek.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "1fc2eef50be21f909b07e1231aed058a46a5fa77247558fb3cbc4d05a5cb304c",
+      "sha256_after": null
+    },
+    {
+      "path": "ai/__pycache__/deteksiWajah.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "343096f0133bcbe0066047e314bc3a96dc288ad8377f7257f86da355ccf2008b",
+      "sha256_after": null
+    },
+    {
+      "path": "ai/__pycache__/pipeline.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "fd0411e54e1aa11c4efd8ce76aea25663863f4ac0be580bec19052b2fa39f614",
+      "sha256_after": null
+    },
+    {
+      "path": "ai/__pycache__/provider.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "f37d0d79ef797833be87c35fa69eddef3537e335b5c31deb2f2adfd52d9119e2",
+      "sha256_after": null
+    },
+    {
+      "path": "ai/__pycache__/runtime.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "057975311757b307c29f55abaf9f2d7b0440c977f843634569119005e17d105b",
+      "sha256_after": null
+    },
+    {
+      "path": "ai/__pycache__/scene.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "a20b6ec60814c4ac21cad20f5cd554deec51a7aeb6207cdc6d397dc244af2974",
+      "sha256_after": null
+    },
+    {
+      "path": "ai/__pycache__/spatial.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "215861cd266eb2ba9a281d41b15edc8b7fe0cd43ece7f4840dd92616b05ad486",
+      "sha256_after": null
+    },
+    {
+      "path": "ai/bacaTex.py",
+      "status": "modified",
+      "sha256_before": "89969d7d827fc3ad8abc8f389191b840575be03d1c8ebce175da66dbe8d02136",
+      "sha256_after": "ceeec59dc2587870d2b2f2592f1c9e77b74e4e186c08baf6ee9b3099e2c2562e"
+    },
+    {
+      "path": "ai/deteksiWajah.py",
+      "status": "modified",
+      "sha256_before": "7c65716e5d9c1ba95743456802430b683a521a52041af56100e4cc484ae479e3",
+      "sha256_after": "ca5aedc217bd2a6437b19e9696d14cf27ace644614b9a644b29a5e2a07dbf20a"
+    },
+    {
+      "path": "ai/output.py",
+      "status": "added",
+      "sha256_before": null,
+      "sha256_after": "2385933ff4257736f6285db51bc7562286a3bfe725150b05750440c67376dc1a"
+    },
+    {
+      "path": "ai/pipeline.py",
+      "status": "modified",
+      "sha256_before": "eb96e24de0c742b5c78a040928b9a1682db039bf47ba0d0e7f8cc1e6d6cd5eed",
+      "sha256_after": "d67e1de9268b3969df81c8de1300777d05f2a26d8fa943b8eca997c34f576728"
+    },
+    {
+      "path": "ai/provider.py",
+      "status": "modified",
+      "sha256_before": "d7d714c547d2a20b63a685bebf2efa2795e7e75d7abb371b40f6d7fc7ba20b2d",
+      "sha256_after": "a8ecc0c6e358e5930a70e0cfc7361215ababa3fb43de3a2ecbb6b98b97633da8"
+    },
+    {
+      "path": "ai/spatial.py",
+      "status": "modified",
+      "sha256_before": "97953394c3d16ab178df2166fd13f10efef51e1280f1cf681b5597a11909fe2a",
+      "sha256_after": "95bdf36c7ad35dda6e743dc8ca3b9e36263da2295406a3627c2da77073e17e8b"
+    },
+    {
+      "path": "app_utils/__pycache__/__init__.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "1151a78e31799ad016cdbfa3f4041f51d81de034e4f63805b89bf5c6b1d33ed8",
+      "sha256_after": null
+    },
+    {
+      "path": "app_utils/__pycache__/audio.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "0ff3a2a2cd9799edab9015dc782d03ed3a0ddffa045fc697128462bf839ad7e1",
+      "sha256_after": null
+    },
+    {
+      "path": "app_utils/__pycache__/esp32_bridge.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "eb428477800c7cc492ddbae10fac07dfd5684e1bdba4dff6b4f4e3708ec393eb",
+      "sha256_after": null
+    },
+    {
+      "path": "app_utils/speaker_handler.py",
+      "status": "deleted",
+      "sha256_before": "fdd2b293e781ab6a151131054dfeb26b3046f38b8cff55fcbc722e7cffd88468",
+      "sha256_after": null
+    },
+    {
+      "path": "config/__pycache__/__init__.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "18f410e36f8d4f00a4e4ce4f8b78d6838ec60a93aeb0c43253928196aa32dde9",
+      "sha256_after": null
+    },
+    {
+      "path": "config/__pycache__/settings.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "52d6fc58ab85cb33df5f46a6cccc8ebe7725ad10732973a3e462205d68d47c6c",
+      "sha256_after": null
+    },
+    {
+      "path": "docs/AUDIT_SOURCE.json",
+      "status": "added",
+      "sha256_before": null,
+      "sha256_after": "d77a021b1760526d713faeccdb2b4cb22fa0349de6dcf46d825a845751630d62"
+    },
+    {
+      "path": "docs/HASIL_UJI.txt",
+      "status": "added",
+      "sha256_before": null,
+      "sha256_after": "6b3a99466cd6bed0e9881fb8b9e5c9964a221179b47940d65a36369cf8ee896f"
+    },
+    {
+      "path": "docs/OCR_COMPARISON.json",
+      "status": "added",
+      "sha256_before": null,
+      "sha256_after": "14f3750b80b7987c55dfc1872f7ce86eb6e927b7e5d4bd0c48b077a3002862f2"
+    },
+    {
+      "path": "docs/PERUBAHAN_AI.md",
+      "status": "added",
+      "sha256_before": null,
+      "sha256_after": "7b805ca7fd69caf4a2ac37c94f0d8bd86e2cf4425f548f908ab16a4d7a930d56"
+    },
+    {
+      "path": "env.example",
+      "status": "modified",
+      "sha256_before": "c7dd4a124bb7db7ed07910dc3f6ed6f53dc80c00d5ef4f5579736f2564b8b1c8",
+      "sha256_after": "becbc44ea8b1d4375e1aa550d965ca113af9d0434f98e2753c62d1be55ca407f"
+    },
+    {
+      "path": "model/yolov5/__pycache__/export.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "bdf3611ba30f93b7868cffadeac51015cdac81e0ecbd19e822d60cbaf1895cab",
+      "sha256_after": null
+    },
+    {
+      "path": "model/yolov5/__pycache__/hubconf.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "782e3e02ead9020d1ec0d3ac755d561210dcb57921f24563fb0a4ed72ca47f33",
+      "sha256_after": null
+    },
+    {
+      "path": "model/yolov5/models/__pycache__/__init__.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "55b92c6bf9be2ab6c7120428cc5320d8aca4371e0c88e62473a15f1b0abb27d8",
+      "sha256_after": null
+    },
+    {
+      "path": "model/yolov5/models/__pycache__/common.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "a976912f45697a27fb85cabb120662a69a48329dab43523e8a0358f8c20717e2",
+      "sha256_after": null
+    },
+    {
+      "path": "model/yolov5/models/__pycache__/experimental.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "d888df6960a799cb481f9bbe3438b87d924f49b589c475391210aca53160b0ea",
+      "sha256_after": null
+    },
+    {
+      "path": "model/yolov5/models/__pycache__/yolo.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "9ccd0ad6edbd3037de649d0df43cb0d990812a262595c7ff94f3ab715edad82c",
+      "sha256_after": null
+    },
+    {
+      "path": "model/yolov5/utils/__pycache__/__init__.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "2d729716468b1ed9af0364e18472a986be5bf1fddf33dd74d47e9b59b99a7702",
+      "sha256_after": null
+    },
+    {
+      "path": "model/yolov5/utils/__pycache__/augmentations.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "f349f55ec942ca9ec6ee3942a038c369b26daa2a15eed272b48610ee5a1f5b91",
+      "sha256_after": null
+    },
+    {
+      "path": "model/yolov5/utils/__pycache__/autoanchor.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "cf688ad45a40bd8c5890d11e3e92f36181c4b286b5b5d6f9b6b84ce4db84414f",
+      "sha256_after": null
+    },
+    {
+      "path": "model/yolov5/utils/__pycache__/dataloaders.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "ddfd689d0f03431dcd2ea74a26868f338f87bff046d57eee858f7b31d32e497b",
+      "sha256_after": null
+    },
+    {
+      "path": "model/yolov5/utils/__pycache__/downloads.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "130409daeb1adc1ef78dea1346bd0647333ee03d7d944e58aee3ef26d01365db",
+      "sha256_after": null
+    },
+    {
+      "path": "model/yolov5/utils/__pycache__/general.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "9abb0b63e8f8824eac20bab33e085653ac4013e5f467982264843deb5e6ea21e",
+      "sha256_after": null
+    },
+    {
+      "path": "model/yolov5/utils/__pycache__/metrics.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "9b3f7caf3e235aa3cbf2b09006b143e5917a8ec34d1be843bdc5263c539dd9d7",
+      "sha256_after": null
+    },
+    {
+      "path": "model/yolov5/utils/__pycache__/plots.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "8b6cbf6911f90fbee05fcd460097d711616b9c10f3528852fc1713051e0c0b7c",
+      "sha256_after": null
+    },
+    {
+      "path": "model/yolov5/utils/__pycache__/torch_utils.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "8d5990685f0974066580166b010f64e99943cd728898ea20a46c7a0edc8f874a",
+      "sha256_after": null
+    },
+    {
+      "path": "requirements-esp32-pcm.txt",
+      "status": "added",
+      "sha256_before": null,
+      "sha256_after": "4dcdcdd4a376b66c9f1270941307d146b4c1a1539d68612a2ba0ff4bd08fe894"
+    },
+    {
+      "path": "server.py",
+      "status": "modified",
+      "sha256_before": "0696cc4b11f5d13f7aa8448ccabf7a1044fb11834fba8f071a643991e4461f03",
+      "sha256_after": "753cf0c654ec3f3ec4e5a27ad139f495887e475f025eabfc5f1a7ed64c9432b8"
+    },
+    {
+      "path": "server_multidevice.py",
+      "status": "modified",
+      "sha256_before": "d31b4e62bde2b8b919669069bbd0fa173bf9c89ad9482bf4af3930004add4ef9",
+      "sha256_after": "a5e524fd19f094748bb90932b225b90a2a2c5ba3aa0c9fdf1b61c1846257dfe3"
+    },
+    {
+      "path": "services/__pycache__/__init__.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "39e9428f50e7fea6e090a111295d0bda8317f9b2cf060992aa0298ad94642410",
+      "sha256_after": null
+    },
+    {
+      "path": "services/__pycache__/database.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "9d5b962221e22b1a8500c71eaa05a451ab97304dd994d113a6cbebfc0e0fdd81",
+      "sha256_after": null
+    },
+    {
+      "path": "services/__pycache__/esp32_events.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "1ee3027fb903ac1b3e2c2885a0b1682da496ce65122fe72f37555ddd2fe28887",
+      "sha256_after": null
+    },
+    {
+      "path": "services/__pycache__/quick_commands.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "5075a0d1c57c92b02c1400362548293b134bc3c278b3330844bec549c7e35f50",
+      "sha256_after": null
+    },
+    {
+      "path": "services/quick_commands.py",
+      "status": "modified",
+      "sha256_before": "bede311eb9ada9cbb310f818e78877e43b33891e869ba368d48589cac6d48336",
+      "sha256_after": "6da4989f5f7599e88b28273a26675a333fb8ad875cdba769183b5525db012387"
+    },
+    {
+      "path": "speech/__pycache__/__init__.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "66753a61e79b9a5dd372f970045fb80f6ce0d42c3048be7fa59790b7fde462a5",
+      "sha256_after": null
+    },
+    {
+      "path": "speech/__pycache__/service.cpython-311.pyc",
+      "status": "deleted",
+      "sha256_before": "2634709c9c4de608c83be87d827561d6544cc4c963e8e2354856d63c217cf2c8",
+      "sha256_after": null
+    },
+    {
+      "path": "tests/test_ai_improvements.py",
+      "status": "added",
+      "sha256_before": null,
+      "sha256_after": "9c527d3e17266819f37eb3b8ab33a8ce61803c621462d6e60eca3a9f25c8233e"
+    },
+    {
+      "path": "tests/test_esp32_frontend.cjs",
+      "status": "modified",
+      "sha256_before": "0420bcb4c6af8fc0537d1eb69cc7856f44efd3ee9aef3fb72d3b1879b7ed8f05",
+      "sha256_after": "edd94ff156b34c349831ec42b3c2834b7c36b4613f1cabd0adb7d0b4e8628336"
+    },
+    {
+      "path": "tests/test_frontend.cjs",
+      "status": "modified",
+      "sha256_before": "1f317ba72798f26a51a29ead53c59905f1844263af09c6a2ec8fa610ca03f414",
+      "sha256_after": "08aea59ba189c94f7881f4563ad6764cb49ca80b4a594ba43b710175d79c935b"
+    },
+    {
+      "path": "tools/benchmark_ocr.py",
+      "status": "added",
+      "sha256_before": null,
+      "sha256_after": "e5261b29b402195424f27131248a7693cbbfc1e2abfe134dc18fe97cdcbe14fd"
+    },
+    {
+      "path": "web/app.js",
+      "status": "modified",
+      "sha256_before": "151618ecdc23d6bb1c68b438933863c26923aed303cafcfc6d8e19c30bb12e23",
+      "sha256_after": "ad8ecb4c4bb681a496a1a6eb4ddee519a9a9be69a1c6697bf08d3c7833d38960"
+    },
+    {
+      "path": "web/index.html",
+      "status": "modified",
+      "sha256_before": "0d69e9221818a98894e1bff1369ab777a89b96988e9adb832aa546ccabdc803c",
+      "sha256_after": "9c89e36adb9fd840dda03b9a19833da724d93a66116d4cd81b41ff6a7784dd00"
+    }
+  ]
+}

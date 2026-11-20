@@ -1,0 +1,47 @@
+# Secrets / local config
+.env
+.env.*
+!.env.example
+
+# Python environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache/build
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs/runtime
+*.log
+*.pid
+
+# Generated media / captures
+audio_storage/*
+!audio_storage/.gitkeep
+captured_images/*
+!captured_images/.gitkeep
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Kredensial firmware
+firmware/*/secrets.h

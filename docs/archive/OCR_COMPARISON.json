@@ -1,0 +1,122 @@
+[
+  {
+    "case": "multiline",
+    "expected": "JALAN KELUAR EXIT 50 CM",
+    "width": 1280,
+    "height": 720,
+    "before": {
+      "text": "JALAN KELUAR\nEXIT 50 CM",
+      "ms": 8680,
+      "cer": 0.0,
+      "reliable": true,
+      "passes": null
+    },
+    "after": {
+      "text": "JALAN KELUAR\nEXIT 50 CM",
+      "ms": 6961,
+      "cer": 0.0,
+      "reliable": true,
+      "passes": 1
+    }
+  },
+  {
+    "case": "small_text",
+    "expected": "TOKO BUKA Senin Jumat 08.00 17.00 Diskon 50%",
+    "width": 1280,
+    "height": 720,
+    "before": {
+      "text": "TOKO BUKA\nSenin Jumat 08.00 17.00",
+      "ms": 6728,
+      "cer": 0.25,
+      "reliable": true,
+      "passes": null
+    },
+    "after": {
+      "text": "TOKO BUKA\nSenin Jumat 08.00 17.00\nDiskon 50%",
+      "ms": 8754,
+      "cer": 0.0,
+      "reliable": true,
+      "passes": 1
+    }
+  },
+  {
+    "case": "tilted_12deg",
+    "expected": "PINTU MASUK BUKA SETIAP HARI",
+    "width": 1280,
+    "height": 720,
+    "before": {
+      "text": "PINTU MASUK\nBUKA SETIAP HARI",
+      "ms": 7482,
+      "cer": 0.0,
+      "reliable": true,
+      "passes": null
+    },
+    "after": {
+      "text": "PINTU MASUK\nBUKA SETIAP HARI",
+      "ms": 4398,
+      "cer": 0.0,
+      "reliable": true,
+      "passes": 1
+    }
+  },
+  {
+    "case": "low_contrast",
+    "expected": "HARAP TENANG RUANG BACA",
+    "width": 1280,
+    "height": 720,
+    "before": {
+      "text": "HARAP TENANG\nRUANG BACA",
+      "ms": 5037,
+      "cer": 0.0,
+      "reliable": true,
+      "passes": null
+    },
+    "after": {
+      "text": "HARAP TENANG\nRUANG BACA",
+      "ms": 7835,
+      "cer": 0.0,
+      "reliable": true,
+      "passes": 1
+    }
+  },
+  {
+    "case": "mixed_sizes",
+    "expected": "PENGUMUMAN Rapat hari Senin pukul 09.00 Lokasi ruang utama",
+    "width": 1280,
+    "height": 720,
+    "before": {
+      "text": "PENGUMUMAN\nRapot hari Senin pukul 09.00\nokasi ruang utama",
+      "ms": 5284,
+      "cer": 0.0345,
+      "reliable": true,
+      "passes": null
+    },
+    "after": {
+      "text": "PENGUMUMAN\nRopot hari Senin pukul 09.00\nLokasi ruang utama",
+      "ms": 6129,
+      "cer": 0.0345,
+      "reliable": true,
+      "passes": 1
+    }
+  },
+  {
+    "case": "blank",
+    "expected": "",
+    "width": 1280,
+    "height": 720,
+    "before": {
+      "text": "",
+      "ms": 13944,
+      "cer": 0.0,
+      "reliable": false,
+      "passes": null
+    },
+    "after": {
+      "text": "",
+      "ms": 6349,
+      "cer": 0.0,
+      "reliable": false,
+      "passes": 1
+    }
+  }
+]

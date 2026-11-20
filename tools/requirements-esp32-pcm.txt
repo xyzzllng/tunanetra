@@ -1,0 +1,3 @@
+# Opsional: hanya untuk esp32_pcm_push.py (push raw PCM ke /tts/play).
+# Instal requirements.txt dahulu. ffmpeg harus tersedia di PATH sistem.
+pydub>=0.25,<0.26

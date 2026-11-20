@@ -1,0 +1,117 @@
+.....................................................................    [100%]
+==================================== PASSES ====================================
+__________________ test_mode_error_does_not_lock_next_request __________________
+------------------------------ Captured log call -------------------------------
+ERROR    test_core:quick_commands.py:199 Quick command gagal
+Traceback (most recent call last):
+  File "/workspace/scratch/e3fd7e335d94/work/pytest/services/quick_commands.py", line 160, in quick
+    result = pipeline.run(mode, frames, camera_id="server" if camera is not None else
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/e3fd7e335d94/work/pytest/ai/pipeline.py", line 88, in run
+    else detector.detect_faces(frame, primary_only=True))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1198, in _execute_mock_call
+    raise effect
+RuntimeError: broken model
+=========================== short test summary info ============================
+PASSED work/pytest/tests/test_ai_improvements.py::test_three_supported_classes[netral]
+PASSED work/pytest/tests/test_ai_improvements.py::test_three_supported_classes[senang]
+PASSED work/pytest/tests/test_ai_improvements.py::test_three_supported_classes[sedih]
+PASSED work/pytest/tests/test_ai_improvements.py::test_expressive_threshold_rejects_weak_result[senang]
+PASSED work/pytest/tests/test_ai_improvements.py::test_expressive_threshold_rejects_weak_result[sedih]
+PASSED work/pytest/tests/test_ai_improvements.py::test_uncertainty_is_not_neutral
+PASSED work/pytest/tests/test_ai_improvements.py::test_burst_rejects_one_frame_emotional_flicker
+PASSED work/pytest/tests/test_ai_improvements.py::test_burst_confirmed_current_track
+PASSED work/pytest/tests/test_ai_improvements.py::test_burst_reset_after_face_disappears_and_across_calls
+PASSED work/pytest/tests/test_ai_improvements.py::test_burst_does_not_join_disjoint_faces
+PASSED work/pytest/tests/test_ai_improvements.py::test_ocr_preserves_raw_thin_strokes
+PASSED work/pytest/tests/test_ai_improvements.py::test_ocr_allocation_stays_bounded
+PASSED work/pytest/tests/test_ai_improvements.py::test_ocr_retry_failure_retains_first_result
+PASSED work/pytest/tests/test_ai_improvements.py::test_ocr_small_text_triggers_retry_even_high_confidence
+PASSED work/pytest/tests/test_ai_improvements.py::test_ocr_deadline_avoids_additional_passes
+PASSED work/pytest/tests/test_ai_improvements.py::test_ocr_contained_partial_does_not_replace_complete
+PASSED work/pytest/tests/test_ai_improvements.py::test_ocr_filter_nan_score
+PASSED work/pytest/tests/test_ai_improvements.py::test_ocr_rotations_applied_to_primary_and_retry
+PASSED work/pytest/tests/test_ai_improvements.py::test_ocr_tile_offsets_and_limit
+PASSED work/pytest/tests/test_ai_improvements.py::test_spoken_output_preserves_printed_percentages
+PASSED work/pytest/tests/test_ai_improvements.py::test_groq_context_keeps_ocr_without_model_scores
+PASSED work/pytest/tests/test_ai_improvements.py::test_uncertain_ocr_never_sent_to_groq
+PASSED work/pytest/tests/test_ai_improvements.py::test_esp32_events_route_to_paired_session
+PASSED work/pytest/tests/test_ai_improvements.py::test_mongodb_ubidots_contracts_without_network
+PASSED work/pytest/tests/test_ai_improvements.py::test_quick_api_expression_burst_contract
+PASSED work/pytest/tests/test_ai_improvements.py::test_pipeline_short_speech_retains_full_ocr
+PASSED work/pytest/tests/test_ai_improvements.py::test_groq_completion_is_cleaned_before_tts
+PASSED work/pytest/tests/test_core.py::test_consensus_rejects_single_frame_false_positive
+PASSED work/pytest/tests/test_core.py::test_consensus_no_stale_ghosts
+PASSED work/pytest/tests/test_core.py::test_consensus_median_not_inflated
+PASSED work/pytest/tests/test_core.py::test_consensus_one_to_one
+PASSED work/pytest/tests/test_core.py::test_single_frame_marked_unverified
+PASSED work/pytest/tests/test_core.py::test_current_coordinates_retained
+PASSED work/pytest/tests/test_core.py::test_prioritize_path_not_small_side_object
+PASSED work/pytest/tests/test_core.py::test_distance_50cm_scaling_and_clipping
+PASSED work/pytest/tests/test_core.py::test_invalid_calibration_graceful
+PASSED work/pytest/tests/test_core.py::test_only_requested_mode[objek-object]
+PASSED work/pytest/tests/test_core.py::test_only_requested_mode[ekspresi-expression]
+PASSED work/pytest/tests/test_core.py::test_only_requested_mode[baca-ocr]
+PASSED work/pytest/tests/test_core.py::test_scene_error_does_not_erase_yolo
+PASSED work/pytest/tests/test_core.py::test_yolo_error_still_returns_sensor_warning
+PASSED work/pytest/tests/test_core.py::test_empty_objects_never_means_safe
+PASSED work/pytest/tests/test_core.py::test_bad_frames_rejected
+PASSED work/pytest/tests/test_core.py::test_ocr_error_not_empty_success
+PASSED work/pytest/tests/test_core.py::test_session_claim_and_repairing
+PASSED work/pytest/tests/test_core.py::test_lazy_import_error_is_retry_limited
+PASSED work/pytest/tests/test_core.py::test_quick_api_result_and_dedup
+PASSED work/pytest/tests/test_core.py::test_quick_no_prompt_dedupe_for_new_click
+PASSED work/pytest/tests/test_core.py::test_stale_sensor_not_used
+PASSED work/pytest/tests/test_core.py::test_sensor_is_not_assigned_to_visual_object
+PASSED work/pytest/tests/test_core.py::test_bad_requests[data0]
+PASSED work/pytest/tests/test_core.py::test_bad_requests[data1]
+PASSED work/pytest/tests/test_core.py::test_bad_requests[data2]
+PASSED work/pytest/tests/test_core.py::test_bad_requests[data3]
+PASSED work/pytest/tests/test_core.py::test_invalid_jpeg_and_retry
+PASSED work/pytest/tests/test_core.py::test_mode_error_does_not_lock_next_request
+PASSED work/pytest/tests/test_core.py::test_local_mode_does_not_require_browser_camera
+PASSED work/pytest/tests/test_core.py::test_concurrent_sessions_backpressure
+PASSED work/pytest/tests/test_core.py::test_sensor_expiring_during_inference_is_omitted
+PASSED work/pytest/tests/test_core.py::test_audio_and_database_job_does_not_block_visual_result
+PASSED work/pytest/tests/test_vision.py::test_face_only_central_primary
+PASSED work/pytest/tests/test_vision.py::test_face_side_only_not_classified
+PASSED work/pytest/tests/test_vision.py::test_face_far_small_not_classified
+PASSED work/pytest/tests/test_vision.py::test_face_count_legacy_no_emotion_inference
+PASSED work/pytest/tests/test_vision.py::test_bundled_emotion_state_dict_and_blank_frame
+PASSED work/pytest/tests/test_vision.py::test_ocr_lines_kept_in_order
+PASSED work/pytest/tests/test_vision.py::test_ocr_overlapping_disagreement_not_duplicated
+PASSED work/pytest/tests/test_vision.py::test_ocr_same_words_different_places_preserved
+PASSED work/pytest/tests/test_vision.py::test_scene_uses_mask_not_bbox_for_corridor
+69 passed in 5.08s
+
+Node: kedua test frontend/ESP32 PASS.
+
+Runtime aktual:
+{
+  "Python": "3.12.14",
+  "numpy": "2.2.6",
+  "OpenCV": "4.11.0",
+  "torch": "2.6.0+cpu",
+  "torchvision": "0.21.0+cpu",
+  "EasyOCR": "1.7.2",
+  "Groq SDK": "1.7.0",
+  "PyMongo": "4.18.0",
+  "transformers": "4.57.6"
+}
+
+Smoke pipeline nyata (SegFormer aktif):
+<PROJECT>/model/yolov5/models/common.py:906: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with amp.autocast(autocast):
+Using CPU. Note: This module is much faster with a GPU.
+{"iteration": 1, "mode": "objek", "ms": 11010, "result": "Hati-hati, ada bus di depan. Hati-hati, ada manusia di depan. Ada manusia di kiri.", "objects": [{"box": [23, 228, 783, 553], "label": "bus", "confidence": 0.4918091297149658, "area_ratio": 0.49440995156892537, "detection_pass": "primary", "temporal_hits": 1, "temporal_frames": 1, "temporal_verified": false, "distance_box_width_px": 783, "label_id": "bus", "position": "tengah", "possible_obstacle": true, "distance_cm": null, "distance_source": null, "priority": "perhatian"}, {"box": [216, 409, 129, 456], "label": "person", "confidence": 0.786978542804718, "area_ratio": 0.0673171783349369, "detection_pass": "primary", "temporal_hits": 1, "temporal_frames": 1, "temporal_verified": false, "distance_box_width_px": 129, "label_id": "manusia", "position": "tengah", "possible_obstacle": true, "distance_cm": null, "distance_source": null, "priority": "perhatian"}, {"box": [55, 398, 156, 492], "label": "person", "confidence": 0.8757600784301758, "area_ratio": 0.08746421964652182, "detection_pass": "primary", "temporal_hits": 1, "temporal_frames": 1, "temporal_verified": false, "distance_box_width_px": 156, "label_id": "manusia", "position": "kiri", "possible_obstacle": false, "distance_cm": null, "distance_source": null, "priority": "informasi"}, {"box": [683, 367, 127, 514], "label": "person", "confidence": 0.8047407269477844, "area_ratio": 0.07436302677797649, "detection_pass": "primary", "temporal_hits": 1, "temporal_frames": 1, "temporal_verified": false, "distance_box_width_px": 127, "label_id": "manusia", "position": "kanan", "possible_obstacle": false, "distance_cm": null, "distance_source": null, "priority": "informasi"}, {"box": [0, 573, 72, 320], "label": "person", "confidence": 0.519067108631134, "area_ratio": 0.026305559802776782, "detection_pass": "primary", "temporal_hits": 1, "temporal_frames": 1, "temporal_verified": false, "distance_box_width_px": 72, "label_id": "manusia", "position": "kiri", "possible_obstacle": false, "distance_cm": null, "distance_source": null, "priority": "informasi"}], "errors": {}}
+{"iteration": 1, "mode": "ekspresi", "ms": 60, "result": "Wajah belum terlihat jelas. Hadapkan wajah ke tengah kamera.", "objects": [], "errors": {}}
+{"iteration": 1, "mode": "baca", "ms": 8737, "result": "JALAN KELUAR\nEXIT 50 CM", "objects": [], "errors": {}}
+PASS []
+Ini smoke test, bukan pengukuran akurasi, jangkauan 50 cm, atau kestabilan video nyata.
