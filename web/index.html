@@ -126,7 +126,7 @@
           <h2 id="hardwareTitle">Komponen <span>utama.</span></h2>
           <p class="section-subtitle">Perangkat nyata yang tercantum pada dokumentasi dan firmware proyek.</p>
         </div>
-        <span class="section-index">01 — 06</span>
+        <span class="section-index">01 — 05</span>
       </div>
       <div class="hardware-grid">
         <article class="hardware-card">
@@ -138,8 +138,8 @@
           <div class="hardware-copy"><span class="component-type">CAPTURE GAMBAR</span><h3>ESP32-CAM</h3><p>Modul OV2640 mengambil JPEG saat dibutuhkan. Backend menarik gambar melalui HTTP; modul ini bukan tempat inferensi AI.</p><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:ESP32-CAM.jpg" target="_blank" rel="noreferrer">Foto: Wikimedia Commons ↗</a></div>
         </article>
         <article class="hardware-card">
-          <div class="hardware-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/SparkFun_HC-SR04_Ultrasonic-Sensor_13959-01a.jpg" alt="Foto sensor ultrasonik HC-SR04" loading="lazy"><span class="component-index">03</span></div>
-          <div class="hardware-copy"><span class="component-type">DETEKSI JARAK</span><h3>Ultrasonic Sensor</h3><p>Sensor HC-SR04 mengukur jarak di depan alat. Peringatan dekat diproses lokal oleh firmware; pembacaan yang dikirim ke backend bersifat terbatas.</p><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:SparkFun_HC-SR04_Ultrasonic-Sensor_13959-01a.jpg" target="_blank" rel="noreferrer">Foto: Wikimedia Commons ↗</a></div>
+          <div class="hardware-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/HC_SR04_Ultrasonic_sensor_1480322_3_4_HDR_Enhancer.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Foto sensor ultrasonik HC-SR04" loading="lazy"><span class="component-index">03</span></div>
+          <div class="hardware-copy"><span class="component-type">DETEKSI JARAK</span><h3>Ultrasonic Sensor</h3><p>Sensor HC-SR04 mengukur jarak di depan alat. Peringatan dekat diproses lokal oleh firmware; pembacaan yang dikirim ke backend bersifat terbatas.</p><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:HC_SR04_Ultrasonic_sensor_1480322_3_4_HDR_Enhancer.jpg" target="_blank" rel="noreferrer">Foto: Wikimedia Commons ↗</a></div>
         </article>
         <article class="hardware-card">
           <div class="hardware-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/SparkFun_push-button-33mm---pink_16094491018_o.jpg" alt="Foto tombol tekan elektronik" loading="lazy"><span class="component-index">04</span></div>
@@ -148,10 +148,6 @@
         <article class="hardware-card">
           <div class="hardware-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Electronic_component_piezo.jpg" alt="Foto komponen piezoelektrik untuk bunyi" loading="lazy"><span class="component-index">05</span></div>
           <div class="hardware-copy"><span class="component-type">OUTPUT AUDIO</span><h3>Buzzer &amp; Speaker</h3><p>Buzzer memberi bunyi peringatan dan konfirmasi. Hasil AI dikirim sebagai audio ke speaker I2S melalui ESP32 Main.</p><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:Electronic_component_piezo.jpg" target="_blank" rel="noreferrer">Foto: Wikimedia Commons ↗</a></div>
-        </article>
-        <article class="hardware-card">
-          <div class="hardware-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/4/43/3A_Power_supply_for_USB_devices_%2817164365019%29.jpg" alt="Foto catu daya USB untuk perangkat elektronik" loading="lazy"><span class="component-index">06</span></div>
-          <div class="hardware-copy"><span class="component-type">CATU DAYA</span><h3>Power Supply</h3><p>ESP32-CAM memerlukan catu 5 V minimal 1 A. Gunakan sumber daya yang stabil; jenis baterai tidak ditetapkan pada dokumentasi.</p><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:3A_Power_supply_for_USB_devices_(17164365019).jpg" target="_blank" rel="noreferrer">Foto: Wikimedia Commons ↗</a></div>
         </article>
       </div>
       <p class="image-note">Foto komponen dari Wikimedia Commons; ilustrasi referensi, bukan dokumentasi unit rakitan proyek.</p>
@@ -183,6 +179,145 @@
     </div>
 
     <div class="view" id="v-simulation">
+    <!-- ===== Pemilih mode: Standalone Simulation (default) / Hardware Mode ===== -->
+    <section class="mode-section page-shell" aria-labelledby="simTitle">
+      <div class="section-heading">
+        <div>
+          <div class="section-kicker"><span class="kicker-line"></span> INTERACTIVE PREVIEW</div>
+          <h2 id="simTitle">Coba SpiderSense <span>langsung.</span></h2>
+          <p class="section-subtitle">Jalankan seluruh simulasi di browser tanpa ESP32, atau beralih ke Hardware Mode saat perangkat fisik tersedia.</p>
+        </div>
+        <div class="mode-switch" role="group" aria-label="Pilih mode penggunaan">
+          <button type="button" class="mode-option" data-app-mode="sim" aria-pressed="true">Standalone Simulation</button>
+          <button type="button" class="mode-option" data-app-mode="hardware" aria-pressed="false">Hardware Mode</button>
+        </div>
+      </div>
+      <div class="mode-banner" id="modeBanner" data-mode="sim" role="status" aria-live="polite">
+        <i class="mode-dot" aria-hidden="true"></i>
+        <div>
+          <strong id="modeBannerTitle">SIMULATION MODE</strong>
+          <p id="modeBannerText">Semua angka, gambar, dan hasil di bawah ini adalah data simulasi lokal di browser. Tidak ada permintaan ke backend, WebSocket, ESP32, atau ESP32-CAM.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PANEL 1: Standalone Simulation (berjalan penuh di browser) ===== -->
+    <div id="simPanel">
+    <section class="sim-section page-shell" aria-label="Simulasi SpiderSense tanpa perangkat">
+      <div class="sim-grid">
+
+        <article class="sim-card" aria-labelledby="simPushTitle">
+          <div class="demo-card-head"><span class="demo-number">01 / INPUT</span><span class="demo-live">DATA SIMULASI</span></div>
+          <h3 id="simPushTitle">Push Button Simulation</h3>
+          <p class="sim-lead">Tekan tombol virtual seperti pada ESP32 Main. Sistem mengambil snapshot simulasi, memproses, lalu menampilkan hasil contoh sesuai mode.</p>
+          <div class="sim-pushpad" role="group" aria-label="Tombol virtual pemilih mode">
+            <button type="button" class="sim-pbtn" data-sim-mode="objek" aria-pressed="false"><span class="cap" aria-hidden="true">1</span><span class="name">Deteksi Objek</span></button>
+            <button type="button" class="sim-pbtn" data-sim-mode="ekspresi" aria-pressed="false"><span class="cap" aria-hidden="true">2</span><span class="name">Deteksi Ekspresi</span></button>
+            <button type="button" class="sim-pbtn" data-sim-mode="rambu" aria-pressed="false"><span class="cap" aria-hidden="true">3</span><span class="name">Deteksi Rambu</span></button>
+          </div>
+          <p class="sim-status"><i class="sim-led" id="simLed" data-state="idle" aria-hidden="true"></i><span id="simPushStatus" role="status" aria-live="polite">Belum ada tombol ditekan.</span></p>
+        </article>
+
+        <article class="sim-card" aria-labelledby="simSensorTitle">
+          <div class="demo-card-head"><span class="demo-number">02 / DISTANCE</span><span class="demo-live">DATA SIMULASI</span></div>
+          <h3 id="simSensorTitle">Ultrasonic Sensor Simulation</h3>
+          <p class="sim-lead">Geser slider untuk mengatur jarak objek virtual. Angka jarak adalah data simulasi, bukan pembacaan HC-SR04 asli.</p>
+          <div class="sim-stage sim-sensor-stage">
+            <svg id="simSensorSvg" viewBox="0 0 420 150" role="img" aria-label="Visualisasi sensor HC-SR04 dan objek virtual pada jarak yang diatur slider" preserveAspectRatio="xMidYMid meet">
+              <g stroke="#C9B79C" stroke-width="2" stroke-linecap="round"><path d="M90 128H360"/><path d="M90 123v10M157.5 123v10M225 123v10M292.5 123v10M360 123v10"/></g>
+              <g font-family="DM Sans, sans-serif" font-size="9" fill="#5E574A" text-anchor="middle"><text x="90" y="145">0</text><text x="157.5" y="145">100</text><text x="225" y="145">200</text><text x="292.5" y="145">300</text><text x="360" y="145">400 cm</text></g>
+              <g id="simRings" fill="none" stroke="#78866B" stroke-width="2.2" stroke-linecap="round"><path/><path/><path/></g>
+              <rect x="12" y="45" width="60" height="60" rx="8" fill="#78866B" stroke="#4F5C44" stroke-width="1.5"/>
+              <circle cx="31" cy="75" r="12" fill="#403B32" stroke="#E5D7C3" stroke-width="3"/><circle cx="53" cy="75" r="12" fill="#403B32" stroke="#E5D7C3" stroke-width="3"/>
+              <text x="42" y="38" font-family="Space Grotesk, sans-serif" font-size="9" font-weight="600" letter-spacing="1" fill="#5E574A" text-anchor="middle">HC-SR04</text>
+              <g id="simObj" style="transform: translateX(90px)">
+                <rect x="0" y="38" width="34" height="74" rx="7" fill="rgba(201,130,98,.28)" stroke="#A5603F" stroke-width="1.5"/>
+                <path d="M8 52h18" stroke="#C98262" stroke-width="2" stroke-linecap="round"/>
+                <text x="17" y="30" font-family="Space Grotesk, sans-serif" font-size="9" font-weight="600" letter-spacing="1" fill="#8C4D30" text-anchor="middle">OBJEK</text>
+              </g>
+            </svg>
+            <span class="sim-zone" id="simZone" data-zone="mid">SEDANG</span>
+            <div class="sim-readout"><strong id="simDistanceValue">120</strong><span>cm</span></div>
+          </div>
+          <div class="sim-slider">
+            <label for="simDistance">Jarak objek virtual</label>
+            <input type="range" id="simDistance" min="2" max="400" step="1" value="120" aria-describedby="simZoneNote">
+            <div class="sim-presets" role="group" aria-label="Jarak cepat">
+              <button type="button" class="button button-quiet" data-cm="30">Dekat · 30</button>
+              <button type="button" class="button button-quiet" data-cm="100">Sedang · 100</button>
+              <button type="button" class="button button-quiet" data-cm="250">Jauh · 250</button>
+            </div>
+          </div>
+          <p class="sim-meta" id="simZoneNote">Rentang HC-SR04: 2–400 cm. Waktu gema simulasi ≈ <b id="simEcho">—</b> µs.</p>
+        </article>
+
+        <article class="sim-card" aria-labelledby="simCamTitle">
+          <div class="demo-card-head"><span class="demo-number">03 / CAPTURE</span><span class="demo-live">DATA SIMULASI</span></div>
+          <h3 id="simCamTitle">Camera Capture Simulation</h3>
+          <p class="sim-lead">Pilih gambar contoh atau unggah gambar dari laptop. Tidak mengakses ESP32-CAM maupun kamera laptop, dan gambar tidak dikirim ke server.</p>
+          <div class="sim-stage sim-image-stage">
+            <img id="simPreviewImg" alt="Pratinjau gambar simulasi">
+            <div class="sim-flash" id="simFlash" aria-hidden="true"></div>
+            <div class="camera-overlay">SIMULATED<br><span>NOT A LIVE CAMERA FEED</span></div>
+          </div>
+          <div class="sim-thumbs" id="simThumbs" role="group" aria-label="Gambar contoh"></div>
+          <div class="sim-actions">
+            <button type="button" class="button button-primary" id="simSnapBtn"><span aria-hidden="true">◉</span> Ambil snapshot</button>
+            <button type="button" class="button button-quiet" id="simUploadBtn">Unggah gambar…</button>
+            <input type="file" id="simUpload" accept="image/*" hidden>
+          </div>
+          <p class="sim-status"><i class="sim-led" id="simSnapLed" data-state="idle" aria-hidden="true"></i><span id="simSnapStatus" role="status" aria-live="polite">Belum ada snapshot.</span></p>
+        </article>
+
+        <article class="sim-card" aria-labelledby="simAiTitle">
+          <div class="demo-card-head"><span class="demo-number">04 / VISION AI</span><span class="demo-live">DATA SIMULASI</span></div>
+          <h3 id="simAiTitle">AI Detection Simulation</h3>
+          <p class="sim-lead">Pilih mode deteksi. Hasil berasal dari contoh yang sudah ditentukan: model AI tidak dijalankan dan gambar tidak dianalisis.</p>
+          <div class="sim-tabs" role="group" aria-label="Pilih mode deteksi">
+            <button type="button" class="sim-tab" data-sim-mode="objek" aria-pressed="false">Deteksi Objek</button>
+            <button type="button" class="sim-tab" data-sim-mode="ekspresi" aria-pressed="false">Deteksi Ekspresi</button>
+            <button type="button" class="sim-tab" data-sim-mode="rambu" aria-pressed="false">Deteksi Rambu</button>
+          </div>
+          <div class="sim-stage sim-image-stage" id="simDetectStage">
+            <img id="simDetectImg" alt="Snapshot simulasi yang menjadi masukan deteksi" hidden>
+            <p class="sim-empty" id="simDetectEmpty">Belum ada snapshot. Pilih mode atau tekan tombol virtual untuk memulai.</p>
+            <div class="sim-bbox" id="simBox" hidden><span id="simBoxLabel"></span></div>
+            <div class="sim-scan" aria-hidden="true"></div>
+            <div class="camera-overlay">SIMULATION<br><span>NOT AN ACTUAL RESULT</span></div>
+          </div>
+          <div class="sim-result" aria-live="polite">
+            <div class="sim-result-head"><span class="sim-badge">SIMULATION RESULT</span><span class="sim-demo-tag">DEMO · bukan analisis AI</span></div>
+            <p class="sim-process" id="simProcess" hidden><i class="sim-spinner" aria-hidden="true"></i><span id="simProcessText"></span></p>
+            <div id="simResultBody">
+              <strong class="sim-result-label" id="simResultLabel">—</strong>
+              <p class="sim-result-desc" id="simResultDesc">Belum ada hasil. Pilih mode deteksi untuk melihat contoh hasil.</p>
+              <div class="sim-conf" id="simConf" hidden>
+                <div class="sim-conf-top"><span>Confidence (nilai contoh / data demonstrasi)</span><b id="simConfValue"></b></div>
+                <div class="sim-conf-track"><div id="simConfFill"></div></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="sim-card sim-card-wide" aria-labelledby="simAudioTitle">
+          <div class="demo-card-head"><span class="demo-number">05 / AUDIO</span><span class="demo-live">DATA SIMULASI</span></div>
+          <h3 id="simAudioTitle">Audio Feedback Simulation</h3>
+          <p class="sim-lead">Hasil simulasi dibacakan oleh browser melalui Web Speech API (<code>speechSynthesis</code>). Tidak memerlukan backend TTS.</p>
+          <blockquote class="sim-speech" id="simSpeechText">Belum ada hasil untuk dibacakan. Jalankan deteksi terlebih dahulu.</blockquote>
+          <div class="sim-actions">
+            <button type="button" class="button button-primary" id="simSpeakBtn" disabled><span aria-hidden="true">▶</span> Dengarkan hasil</button>
+            <button type="button" class="button button-quiet" id="simStopBtn" disabled><span aria-hidden="true">■</span> Hentikan suara</button>
+            <label class="sim-check"><input type="checkbox" id="simAutoSpeak"> Bacakan otomatis setiap hasil baru</label>
+          </div>
+          <p class="sim-status"><i class="sim-led" id="simAudioLed" data-state="idle" aria-hidden="true"></i><span id="simAudioStatus" role="status" aria-live="polite">Audio siap.</span></p>
+        </article>
+      </div>
+      <p class="sim-disclaimer">Semua visual, angka jarak, bounding box, dan confidence pada mode ini adalah data simulasi untuk demonstrasi antarmuka. Untuk hasil nyata gunakan Hardware Mode dengan perangkat terpasang.</p>
+    </section>
+    </div>
+
+    <!-- ===== PANEL 2: Hardware Mode (isi lama, tidak diubah; hanya dibungkus) ===== -->
+    <div id="hardwarePanel" hidden>
     <section class="status-section page-shell" aria-labelledby="statusHeading">
       <div class="section-kicker"><span class="kicker-line"></span> SYSTEM MONITOR</div>
       <div class="status-heading-row">
@@ -239,7 +374,7 @@
           <h2 id="demoTitle">Live <span>demonstration.</span></h2>
           <p class="section-subtitle">Pratinjau simulasi antarmuka. Animasi 3D belum dibuat dan tidak ada feed kamera HP. Kartu berlabel ILLUSTRATION hanya gambaran, bukan data aktual.</p>
         </div>
-        <span class="demo-badge"><i></i> SIMULATION MODE</span>
+        <span class="demo-badge"><i></i> HARDWARE MODE</span>
       </div>
 
       <div class="demo-grid">
@@ -385,6 +520,7 @@
         </div>
       </details>
     </section>
+    </div><!-- /#hardwarePanel -->
     </div>
   </main>
 
